@@ -210,8 +210,8 @@ IF !DEF(FAST)
     dec [hl]
     jr nz, .waitLoop
 ELSE
-    ld a, $C1
-    call PlaySound
+;    ld a, $C1
+;    call PlaySound
 ENDC
     call Preboot
 IF DEF(AGB)

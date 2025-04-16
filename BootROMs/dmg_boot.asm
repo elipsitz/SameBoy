@@ -83,6 +83,7 @@ Start:
     ld d, LOW(-119)
     ld c, 15
 
+IF !DEF(FAST)
 .animate
     call WaitFrame
     ld a, d
@@ -117,6 +118,7 @@ Start:
 ; Wait ~1 second
     ld b, 60
     call WaitBFrames
+ENDC
 
 ; Set registers to match the original DMG boot
 IF DEF(MGB)
